@@ -159,7 +159,7 @@ int main(){
         {
             if (modelStatus == 1)
             {
-                if (hasDeployPermission != 0)
+                if (has_Deploy_Permission != 0)
                 {
                     printf("Deployment Ready: YES\n");
                 }
@@ -193,7 +193,7 @@ int main(){
     }
 
     printf("\nFinal Permission Check: %s\n",
-           hasDeployPermission ? "Allowed" : "Denied");
+           has_Deploy_Permission ? "Allowed" : "Denied");
 
 
     printf("Final Decision: %s\n",
@@ -201,7 +201,7 @@ int main(){
          confidence >= 75 &&
          datasetSize >= 1000 &&
          modelStatus == 1 &&
-         hasDeployPermission != 0))? "DEPLOY MODEL" : "DO NOT DEPLOY");
+         has_Deploy_Permission != 0))? "DEPLOY MODEL" : "DO NOT DEPLOY");
 
     return 0;
 }
